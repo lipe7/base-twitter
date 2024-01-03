@@ -26,6 +26,29 @@ it('should be able to create a tweet', function () {
             ->created_by->toBe($user->id);
 });
 
-todo('body is required');
+it('only authenticated users can twitter', function(){
+    livewire(Create::class)
+        ->set('body', 'This is my tweet')
+        ->call('tweet')
+        ->assertForbidden();
+
+    actingAs(User::factory()->create());
+
+    livewire(Create::class)
+        ->set('body', 'This is my tweet')
+        ->call('tweet')
+        ->assertEmitted('tweet::created');
+});
+
+test('body is required', function () {
+    actingAs(User::factory()->create());
+
+    livewire(Create::class)
+        ->set('body', null)
+        ->call('tweet')
+        ->assertHasErrors(['body' => 'required']);
+});
+
+
 todo('the tweet body should have a max length of 140 characters');
 todo('should show the tweet on the timeline');
