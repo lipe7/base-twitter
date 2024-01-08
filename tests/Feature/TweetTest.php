@@ -74,3 +74,15 @@ it('should show the tweet on the timeline', function(){
         ->assertSee('This is my tweet');
 
 });
+
+it('must clean the body field after performing a send', function(){
+    $user = User::factory()->create();
+
+    actingAs($user);
+
+    livewire(Create::class)
+        ->set('body', 'This is my tweet')
+        ->call('tweet')
+        ->assertEmitted('tweet::created')
+        ->assertSet('body', null);
+});
