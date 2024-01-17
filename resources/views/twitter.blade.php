@@ -17,7 +17,7 @@
     </head>
     <body class="h-full font-sans antialiased text-white bg-black">
 
-        <div class="container grid h-full grid-cols-4 mx-auto bg-yellow-800">
+        <div class="container grid h-full grid-cols-4 mx-auto">
 
             {{-- MENU --}}
             <div class="pt-px text-[#d6d9db] space-y-2 flex flex-col">
@@ -37,11 +37,11 @@
             </div>
             {{-- END MENU --}}
 
-            <div class="col-span-2 bg-green-800 border-[#2f3336] border-x-[0.625px]">
-                asd
+            <div class="col-span-2 text-center border-[#2f3336] border-x-[0.625px]">
+                Timeline
             </div>
-            <div class="">
-                asd
+            <div class="text-center">
+                Trending Topics
             </div>
 
         </div>

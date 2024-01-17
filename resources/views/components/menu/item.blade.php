@@ -13,7 +13,7 @@
             </div>
 
             @if($title)
-                <div class="pr-6 text-lg font-bold text-black truncate">{{ $title }}</div>
+                <div class="pr-6 text-lg font-bold text-white truncate">{{ $title }}</div>
             @endif
         </div>
     </a>

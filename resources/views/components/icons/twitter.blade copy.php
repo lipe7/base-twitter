@@ -1,4 +1,4 @@
-<svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 fill-[#000000] flex">
+<svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 fill-[#ffffff] flex">
 
     <g>
         <path

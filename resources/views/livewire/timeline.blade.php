@@ -1,7 +1,7 @@
-<div>
+<div class="mt-10 text-lg text-white">
     @foreach ( $tweets as $t)
         <div>
-            {{ $t->body }}
+            {{ $loop->index }} - {{ $t->body }}
         </div>
     @endforeach
 </div>
